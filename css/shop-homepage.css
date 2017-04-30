@@ -28,10 +28,12 @@ body {
 
 .caption h4 {
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .thumbnail img {
     width: 100%;
+    max-height: 260px;
 }
 
 .ratings {
