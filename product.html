@@ -65,20 +65,21 @@
       <div class="content-wrapper">
         <div class="item-container">
           <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-7">
               <div class="product">
                   <img id="item-display" src="" alt=""></img>
               </div>
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-5">
               <div class="product-title"></div>
               <div class="product-desc"></div>
-              <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+              <div class="product-rating"></div>
               <hr>
-              <div class="product-price">$ 1234.00</div>
+              <div class="product-price"></div>
               <div class="product-stock">In Stock</div>
               <hr>
+              <div class="product-colors"></div>
               <div class="btn-group cart">
                 <button type="button" class="btn btn-success">
                   Add to cart
@@ -94,19 +95,10 @@
         </div>
         <div class="row">
           <div class="col-md-12 product-info">
-            <ul id="myTab" class="nav nav-tabs nav_tabs">
-              <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-            </ul>
-            <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade in active" id="service-one">
+            <hr class="top">
+            <section class="container product-info">
 
-                <section class="container product-info">
-
-                </section>
-
-              </div>
-            </div>
-            <hr>
+            </section>
           </div>
         </div>
       </div>
@@ -136,6 +128,36 @@
     <script src="walletlist.js"></script>
 
     <script>
+      function walletStars(wallet) {
+        var walletHTML = "";
+        var stars = Math.trunc(parseFloat(wallet.rating) * 10);
+        var halfStar = stars % 10;
+        stars = Math.trunc(stars / 10);
+        var fullStars = stars;
+
+        for (var i = 0; i < fullStars; i++) {
+          walletHTML += '<i class="fa fa-star gold"></i>';
+        }
+
+        if (halfStar == 5) {
+          walletHTML += '<i class="fa fa-star gold"></i>';
+          fullStars += 1;
+        }
+
+        for (var i = fullStars; i < 5; i++) {
+          walletHTML += '<i class="fa fa-star-o"></i> ';
+        }
+        return walletHTML;
+      }
+
+      function walletColors(wallet) {
+        var walletHTML = "";
+        for (var i = 0; i < wallet.colors.length; i++) {
+          walletHTML += "<img src='"+wallet.colors[i]+"' />"
+        }
+        return walletHTML;
+      }
+
       var QueryString = function () {
       // This function is anonymous, is executed immediately and
       // the return value is assigned to QueryString!
@@ -167,6 +189,10 @@
         $(".product-price").html(wallet.price);
         $(".product-title").text(wallet.name);
         $("#item-display").attr("src", wallet.image);
+        $(".product-rating").html(walletStars(wallet));
+        $(".product-desc").text(wallet.categories.join(", "));
+        console.log(walletColors(wallet));
+        $(".product-colors").html(walletColors(wallet));
       });
     </script>
 </body>

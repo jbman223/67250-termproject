@@ -66,7 +66,17 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Big Skinny Wallets</p>
+                <h2 style="margin-top: 0;">Big Skinny Wallets</h2>
+
+                <form style="padding-bottom: 15px;">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for a wallet">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div><!-- /input-group -->
+                </form>
+
                 <div class="list-group">
                     <a href="#" class="list-group-item disabled">
                       Gender
@@ -158,10 +168,33 @@
     <script src="walletlist.js"></script>
 
     <script>
-    var overall_categorey = "";
+      var overall_categorey = "";
+
+      function walletStars(wallet) {
+        var walletHTML = "";
+        var stars = Math.trunc(parseFloat(wallet.rating) * 10);
+        var halfStar = stars % 10;
+        stars = Math.trunc(stars / 10);
+        var fullStars = stars;
+
+        for (var i = 0; i < fullStars; i++) {
+          walletHTML += '<span class="glyphicon glyphicon-star"></span>';
+        }
+
+        if (halfStar == 5) {
+          walletHTML += '<span class="glyphicon glyphicon-star"></span>';
+          fullStars += 1;
+        }
+
+        for (var i = fullStars; i < 5; i++) {
+          walletHTML += '<span class="glyphicon glyphicon-star-empty"></span>';
+        }
+        return walletHTML;
+      }
+
       function makeWalletHTML(index, wallet) {
 
-        var walletHTML = '<div class="col-sm-4 col-lg-4 col-md-4">';
+        var walletHTML = '<div class="col-sm-4 col-lg-4 col-md-4" style="height: 442px;">';
         walletHTML += '<div class="thumbnail">';
         walletHTML += '<img src="'+wallet.image+'" alt="">';
         walletHTML += '<div class="caption">';
@@ -173,11 +206,7 @@
         walletHTML += '<div class="ratings">';
         walletHTML += '<p class="pull-right">199 reviews</p>';
         walletHTML += '<p>';
-        walletHTML += '<span class="glyphicon glyphicon-star"></span>';
-        walletHTML += '<span class="glyphicon glyphicon-star"></span>';
-        walletHTML += '<span class="glyphicon glyphicon-star"></span>';
-        walletHTML += '<span class="glyphicon glyphicon-star"></span>';
-        walletHTML += '<span class="glyphicon glyphicon-star-empty"></span>';
+        walletHTML += walletStars(wallet);
         walletHTML += '</p>';
         walletHTML += '</div>';
         walletHTML += '</div>';

@@ -1,7 +1,7 @@
 /*********************************************
     			Call Bootstrap
 *********************************************/
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
 /*********************************************
         		Theme Elements
@@ -54,6 +54,25 @@
 		margin-top: 50px;
 }
 
+.product-colors {
+	margin-bottom: 10px;
+}
+
+.product-colors img {
+	margin: 0 5px 5px 0;
+	border: 2px solid transparent;
+}
+
+.product-colors img:first-child {
+	margin: 0 5px 5px 0;
+	border: 2px solid black;
+}
+
+.product-colors img:hover {
+	margin: 0 5px 5px 0;
+	border: 2px solid black;
+	cursor: pointer;
+}
 /*********************************************
 					VIEW
 *********************************************/
@@ -83,6 +102,11 @@
 	padding-left: 0px;
 	padding-right: 0px;
 	max-width: 100%;
+}
+
+hr.top {
+	padding: 0px;
+	margin: 5px 0 5px 0;
 }
 
 /*********************************************

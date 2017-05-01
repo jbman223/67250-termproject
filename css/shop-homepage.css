@@ -54,3 +54,17 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.list-group-item.disabled {
+  color: #555;
+  cursor: default;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.list-group-item.disabled:hover {
+  color: #555;
+  cursor: default;
+  font-weight: bold;
+  font-size: 14px;
+}
