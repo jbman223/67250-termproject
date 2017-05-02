@@ -17,6 +17,8 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -88,6 +90,22 @@
                     <span class="glyphicon glyphicon-star-empty"></span>
                     <span class="glyphicon glyphicon-star-empty"></span>
                   </p>
+                </div>
+
+                <div class="price-slider" style="padding-bottom: 15px;">
+                  <h5>Categorize By Price</h5>
+                  <input
+	type="text"
+	name="somename"
+	data-provide="slider"
+	data-slider-ticks="[0, 100]"
+	data-slider-ticks-labels='["$0.00", "$100.00"]'
+	data-slider-min="0"
+	data-slider-max="100"
+	data-slider-step="1"
+	data-slider-value="25"
+	data-slider-tooltip="hide"
+>
                 </div>
 
                 <div class="list-group">
@@ -183,6 +201,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="walletlist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
 
     <script>
       var overall_categorey = "";
@@ -265,6 +284,7 @@
       });
 
       $(function () {
+        $("input.slider").slider();
         outputWallets("");
       })
     </script>
