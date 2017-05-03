@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Find My Wallet - Big Skinny Wallets</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      .option {
+        margin-bottom: 20px;
+      }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img alt="Brand" src="img/bigsknylogowhite@2x.png" style="width: 100px;margin-top: -10px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="walletMatch.html">Wallet Match</a>
+                    </li>
+                    <li>
+                        <a href="coupon.html">Win a Coupon</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a class="cart" href="cart.html">Link</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Find your perfect Big Skinny wallet</h2>
+            <p class="lead">Our wallet match page will give you the tradeshow experience Big Skinny wallets are famous for. Follow these simple questions to get matched with your perfect Big Skinny wallet.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Instructions</h3>
+            <p>Click on which button best describes you. At the end, you will be presented with a wallet that should fit your uses.</p>
+          </div>
+        </div>
+
+        <div class="row option">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-primary">I am a guy</a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-default">I am a girl</a>
+          </div>
+        </div>
+
+        <div class="row option second" style="display: none;">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-primary">I keep change in my wallet</a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-default">I do not keep change in my wallet</a>
+          </div>
+        </div>
+
+        <div class="row option third" style="display: none;">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-primary">I prefer a standard wallet</a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-default">I prefer an envelope wallet</a>
+          </div>
+        </div>
+
+        <div class="row option fourth" style="display: none;">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-primary">I prefer a bifold wallet</a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn btn-block btn-default">I prefer an trifold wallet</a>
+          </div>
+        </div>
+
+        <div class="row fifth" style="display: none;">
+          <div class="col-md-12">
+            <h3>Your Result:</h3>
+            <div class="wallet-result">
+              <p class="lead name"></p>
+              <img class="image" src="" style="max-width: 400px;" />
+            </div>
+            <a href="product.html?id=" class="btn btn-success btn-lg purchase">Purchase Now &raquo;</a>
+          </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Big Skinny Wallets, 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="walletlist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/cart.js"></script>
+
+    <script>
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+      $(function () {
+        var walletID = getRandomInt(0, wallets.length);
+        walletID = 6;
+        var wallet = wallets[walletID];
+        $(".name").text(wallet.name);
+        $(".image").attr("src", wallet.image);
+        $(".purchase").attr("href", "product.html?id="+walletID);
+      });
+
+      var thing = 0;
+      var things = ['first', 'second', 'third', 'fourth', 'fifth'];
+
+
+      $(".option a").click(function () {
+        thing++;
+        if (thing < 5) {
+          $("."+things[thing]).show();
+        }
+      });
+    </script>
+</body>
+
+</html>

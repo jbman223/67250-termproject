@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Win a Coupon - Big Skinny Wallets</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .text-italics {
+        font-style: italic;
+      }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img alt="Brand" src="img/bigsknylogowhite@2x.png" style="width: 100px;margin-top: -10px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="walletMatch.html">Wallet Match</a>
+                    </li>
+                    <li>
+                        <a href="coupon.html">Win a Coupon</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a class="cart" href="cart.html">Link</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+              <h2>Write a wallet Haiku, get a coupon.</h2>
+              <p class='lead'>
+                Write us your best wallet haiku, and we will reward you with a coupon for 25% off your next wallet purchase.
+              </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form>
+              <div class="form-group">
+                <label for="haiku">Enter your haiku</label>
+                <textarea class="form-control" id="haiku" name="haiku"></textarea>
+                <span class="help-block" style="display: none;">Please enter a haiku poem.</span>
+              </div>
+              <a href="#" class="get-coupon btn btn-success btn-block">Get your coupon &raquo;</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Read recent Haikus</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <p class="lead text-center text-italics" style="margin-bottom: 0;">
+              Green and speckled legs,<br />
+Hop on logs and lily pads<br />
+Splash in cool water.
+            </p>
+
+            <p class="small text-muted text-right">
+              - John Doe
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <p class="lead text-center text-italics" style="margin-bottom: 0;">
+              In a pouch I grow,<br />
+On a southern continent --<br />
+Strange creatures I know.
+            </p>
+
+            <p class="small text-muted text-right">
+              - John Doe
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <p class="lead text-center text-italics" style="margin-bottom: 0;">
+              Autumn moonlight—<br />
+a worm digs silently<br />
+into the chestnut.
+            </p>
+
+            <p class="small text-muted text-right">
+              - John Doe
+            </p>
+          </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Big Skinny Wallets, 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Coupon Code</h4>
+      </div>
+      <div class="modal-body text-center">
+        <p class="lead text-center">Thanks for your haiku! Heres your coupon code:</p>
+        <h3 class="text-center code">
+          HAIKU
+        </h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="walletlist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/cart.js"></script>
+
+    <script>
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    $(".get-coupon").click(function (e) {
+      if ($("textarea").val().length < 10) {
+        $("textarea").parent().addClass("has-error");
+        $(".help-block").show();
+        return;
+      } else {
+        $("textarea").parent().removeClass("has-error");
+        $(".help-block").hide();
+      }
+
+      $(".code").text("HAIKU"+getRandomInt(100, 200));
+      e.preventDefault();
+      $('#myModal').modal('show');
+      $("textarea").val("");
+    });
+    </script>
+</body>
+
+</html>

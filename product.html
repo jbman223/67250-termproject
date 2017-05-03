@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Products - Big Skinny Wallets</title>
+    <title>Product - Big Skinny Wallets</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +25,40 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+      .divider {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .divider div {
+      }
+      .divider .left {
+        flex-grow: 2;
+        border: 1px solid #e5e5e5;
+        height: 1px;
+        margin-bottom: 3px;
+      }
+
+      .divider .right {
+        flex-grow: 2;
+        border: 1px solid #e5e5e5;
+        height: 1px;
+        margin-bottom: 3px;
+      }
+
+      .divider .middle {
+        text-align: center;
+      }
+      .divider .middle p {
+        margin: 1px 4px 4px 4px;
+        color: #e3e3e3;
+      }
+
+    </style>
 </head>
 
 <body>
@@ -40,7 +74,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Big Skinny</a>
+                <a class="navbar-brand" href="index.html">
+                  <img alt="Brand" src="img/bigsknylogowhite@2x.png" style="width: 100px;margin-top: -10px;">
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -52,10 +88,20 @@
                         <a href="products.html">Products</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="walletMatch.html">Wallet Match</a>
                     </li>
-                </ul>
-            </div>
+                    <li>
+                        <a href="coupon.html">Win a Coupon</a>
+                    </li>
+                    <li>
+                      <a href="about.html">About</a>
+                    </li>
+                  </ul>
+
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a class="cart" href="cart.html">Link</a></li>
+                  </ul>
+                </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -80,22 +126,22 @@
               <div class="product-stock">In Stock</div>
               <hr>
               <div class="product-colors"></div>
-              <div class="btn-group cart">
-                <button type="button" class="btn btn-success">
-                  Add to cart
-                </button>
-              </div>
-              <div class="btn-group wishlist">
-                <button type="button" class="btn btn-danger">
-                  Add to wishlist
-                </button>
+              <div class="product-purchase">
+                <div class="text-center">
+                  <a href="#" class="btn btn-block btn-primary add-to-cart">Add to cart</a>
+                  <div class="divider">
+                    <div class="left"></div>
+                    <div class="middle"><p>OR</p></div>
+                    <div class="right"></div>
+                  </div>
+                  <img src="img/buy-now.png" style="width: 150px;" />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 product-info">
-            <hr class="top">
             <section class="container product-info">
 
             </section>
@@ -126,6 +172,9 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="walletlist.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/cart.js"></script>
+
 
     <script>
       function walletStars(wallet) {
@@ -185,7 +234,7 @@
         var wallet = wallets[QueryString.id];
         console.log(wallet);
 
-        $("section.product-info").html(wallet.description);
+        $("section.product-info").html("<h3>Features</h3>"+wallet.description);
         $(".product-price").html(wallet.price);
         $(".product-title").text(wallet.name);
         $("#item-display").attr("src", wallet.image);
@@ -193,6 +242,10 @@
         $(".product-desc").text(wallet.categories.join(", "));
         console.log(walletColors(wallet));
         $(".product-colors").html(walletColors(wallet));
+
+        $(".add-to-cart").data("id", QueryString.id);
+
+        $("title").text(wallet.name + " - Big Skinny Wallets");
       });
     </script>
 </body>
