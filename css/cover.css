@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: #333 url('http://exentri.com/wp/wp-content/uploads/2014/02/the-exentri-wallet-1600x610.jpg') no-repeat center fixed;
+  background: #333 url('img/the-exentri-wallet-1600x610.jpg') no-repeat center fixed;
 }
 body {
   color: #fff;
